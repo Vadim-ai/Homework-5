@@ -5,54 +5,60 @@ public class Main {
             animals[0] = 1;
             animals[1] = 2;
             animals[2] = 3;
-            System.out.print(animals[0] + ", ");
-            System.out.print(animals[1] + ", ");
-            System.out.print(animals[2]);
-
+            int animal = animals.length;
+            for (int i = 0; i < animals.length; i++) {
+                System.out.print(animals[i]);
+                if (i != animals.length - 1)
+                    System.out.print(", ");
+            }
             System.out.println();
 
             double[] stars = {1.57, 7.654, 9.986};
-            System.out.print(stars[0] + ", ");
-            System.out.print(stars[1] + ", ");
-            System.out.print(stars[2]);
-
-
+            for (int w = 0; w < stars.length; w++) {
+                System.out.print(stars[w]);
+                if (w != stars.length - 1)
+                    System.out.print(", ");
+            }
             System.out.println();
 
             short[] elements = {4, 5, 6};
-            System.out.print(elements[0] + ", ");
-            System.out.print(elements[1] + ", ");
-            System.out.print(elements[2]);
-
+            for (int v = 0; v < elements.length; v++) {
+                System.out.print(elements[v]);
+                if (v != elements.length - 1)
+                    System.out.print(", ");
+            }
             System.out.println();
 
             //Lesson 5 Task 3
-            System.out.print(elements[2] + ", ");
-            System.out.print(elements[1] + ", ");
-            System.out.print(elements[0]);
+             for (int v = elements.length - 1; v >= 0 ; v--) {
+                 System.out.print(elements[v]);
+                 if (v != 0)
+                     System.out.print(", ");
+             }
+                 
+            System.out.println();
+
+            for (int w = elements.length - 1; w >= 0; w--) {
+                System.out.print(stars[w]);
+                if (w != 0)
+                    System.out.print(", ");
+            }
 
             System.out.println();
 
-            System.out.print(stars[2] + ", ");
-            System.out.print(stars[1] + ", ");
-            System.out.print(stars[0]);
-
-
-            System.out.println();
-
-            System.out.print(animals[2] + ", ");
-            System.out.print(animals[1] + ", ");
-            System.out.print(animals[0]);
-
+            for (int i = elements.length - 1; i >= 0; i--) {
+                System.out.print(animals[i]);
+                if (i != 0)
+                    System.out.print(", ");
+            }
             System.out.println();
 
             //Lesson 5 Task 4
 
-        int animal = animals.length; // потестил))
+        
         for (int i = 0; i < animal; i++) {
-            if (animals[i] / 1 == 1 || animals[i] % 2 == 1) {
-                animals[i] = animals[i] + 1;
-                System.out.println(animals[i]);
+            if (animals[i] % 2 == 1) {
+                System.out.println(++animals[i]);
             } else {
                 System.out.println(animals[i]);
             }
@@ -61,3 +67,4 @@ public class Main {
 
     }
 }
+
