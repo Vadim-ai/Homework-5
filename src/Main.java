@@ -97,9 +97,15 @@ public class Main {
         System.out.println(Arrays.toString(arrayCorrect));
 
         // Lesson 5 Task 7
-        for (int i = 4; i > -1; i--) {
-            System.out.print(arrayWithMistake[i] + " ");
-        }
+            int corrector = arrayCorrect[4];
+            int correctorS = arrayCorrect[3];
+            arrayCorrect[4] = arrayCorrect[0]; 
+            arrayCorrect[0] = corrector;       
+            arrayCorrect[3] = arrayCorrect[1]; 
+            arrayCorrect[1] = correctorS;      
+            for (int i = 0; i < arrayCorrect.length; i++) {
+            System.out.print(arrayCorrect[i] + " ");
+            }
         System.out.println();
 
 
