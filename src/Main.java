@@ -97,15 +97,13 @@ public class Main {
         System.out.println(Arrays.toString(arrayCorrect));
 
         // Lesson 5 Task 7
-            int corrector = arrayCorrect[4];
-            int correctorS = arrayCorrect[3];
-            arrayCorrect[4] = arrayCorrect[0]; 
-            arrayCorrect[0] = corrector;       
-            arrayCorrect[3] = arrayCorrect[1]; 
-            arrayCorrect[1] = correctorS;      
-            for (int i = 0; i < arrayCorrect.length; i++) {
-            System.out.print(arrayCorrect[i] + " ");
+        for (int i = 0; i < (arrayCorrect.length - 1)/2; i++) {
+            int corrector = arrayCorrect[i];
+            arrayCorrect[i] = arrayCorrect[arrayCorrect.length - i - 1];
+            arrayCorrect[arrayCorrect.length -i - 1] = corrector;
             }
+        System.out.println(Arrays.toString(arrayCorrect));
+        
         System.out.println();
 
 
